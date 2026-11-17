@@ -33,6 +33,8 @@ mente-aberta-citec/
 │   └── contato.js          # Validação dos campos e feedback visual do formulário
 └── assets/
     └── img/                # Fotos dos integrantes e capturas de tela do projeto
+```
+
 
 
 ## Declaração de Uso de IA
