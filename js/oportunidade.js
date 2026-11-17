@@ -1,11 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const formBusca = document.getElementById("form-busca");
   const campoBusca = document.getElementById("campo-busca");
   const filtroCategoria = document.getElementById("filtro-categoria");
   const filtroPerfil = document.getElementById("filtro-perfil");
+  const btnLimpar = document.getElementById("btn-limpar");
   const listaContainer = document.getElementById("lista-oportunidades");
   const contador = document.getElementById("contador-resultados");
 
-  if (!listaContainer) return;
+  if (!listaContainer || typeof OPORTUNIDADES === "undefined") return;
+
+  function normalizarTexto(texto) {
+    return texto
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "");
+  }
 
   function renderizarCards(lista) {
     listaContainer.innerHTML = "";
@@ -41,15 +50,15 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function filtrarOportunidades() {
-    const termo = campoBusca.value.trim().toLowerCase();
+    const termo = normalizarTexto(campoBusca.value.trim());
     const categoria = filtroCategoria.value;
     const perfil = filtroPerfil.value;
 
     const filtradas = OPORTUNIDADES.filter((item) => {
       const bateTexto =
-        item.titulo.toLowerCase().includes(termo) ||
-        item.descricao.toLowerCase().includes(termo) ||
-        item.instituicao.toLowerCase().includes(termo);
+        normalizarTexto(item.titulo).includes(termo) ||
+        normalizarTexto(item.descricao).includes(termo) ||
+        normalizarTexto(item.instituicao).includes(termo);
       const bateCategoria = categoria === "Todos" || item.categoria === categoria;
       const batePerfil = perfil === "Todos" || item.perfil === perfil;
 
@@ -59,9 +68,25 @@ document.addEventListener("DOMContentLoaded", () => {
     renderizarCards(filtradas);
   }
 
+  if (formBusca) {
+    formBusca.addEventListener("submit", (evento) => {
+      evento.preventDefault();
+      filtrarOportunidades();
+    });
+  }
+
   campoBusca.addEventListener("input", filtrarOportunidades);
   filtroCategoria.addEventListener("change", filtrarOportunidades);
   filtroPerfil.addEventListener("change", filtrarOportunidades);
+
+  if (btnLimpar) {
+    btnLimpar.addEventListener("click", () => {
+      campoBusca.value = "";
+      filtroCategoria.value = "Todos";
+      filtroPerfil.value = "Todos";
+      renderizarCards(OPORTUNIDADES);
+    });
+  }
 
   renderizarCards(OPORTUNIDADES);
 });

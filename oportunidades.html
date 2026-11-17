@@ -34,34 +34,41 @@
     <h1>Oportunidades Disponíveis</h1>
     <p>Filtre por tipo de atendimento, perfil ou digite o que você procura.</p>
 
-    <section class="card grupo-filtros" aria-label="Filtros de busca">
-      <div class="campo-form">
-        <label for="campo-busca">Buscar por palavra-chave</label>
-        <input type="search" id="campo-busca" placeholder="Ex: elétrica, SUS, Bolsa, jovem...">
-      </div>
+    <section class="card" aria-label="Filtros de busca">
+      <form id="form-busca" class="grupo-filtros">
+        <div class="campo-form">
+          <label for="campo-busca">Buscar por palavra-chave</label>
+          <input type="search" id="campo-busca" placeholder="Ex: elétrica, SUS, Bolsa, jovem...">
+        </div>
 
-      <div class="campo-form">
-        <label for="filtro-categoria">Categoria</label>
-        <select id="filtro-categoria">
-          <option value="Todos">Todas</option>
-          <option value="Curso">Curso</option>
-          <option value="Serviço">Serviço</option>
-          <option value="Vaga">Vaga</option>
-          <option value="Benefício">Benefício</option>
-        </select>
-      </div>
+        <div class="campo-form">
+          <label for="filtro-categoria">Categoria</label>
+          <select id="filtro-categoria">
+            <option value="Todos">Todas</option>
+            <option value="Curso">Curso</option>
+            <option value="Serviço">Serviço</option>
+            <option value="Vaga">Vaga</option>
+            <option value="Benefício">Benefício</option>
+          </select>
+        </div>
 
-      <div class="campo-form">
-        <label for="filtro-perfil">Perfil</label>
-        <select id="filtro-perfil">
-          <option value="Todos">Todos</option>
-          <option value="Geral">Geral</option>
-          <option value="Jovem">Jovem</option>
-          <option value="Idoso">Idoso</option>
-          <option value="PCD">PCD</option>
-          <option value="Baixa Renda">Baixa Renda</option>
-        </select>
-      </div>
+        <div class="campo-form">
+          <label for="filtro-perfil">Perfil</label>
+          <select id="filtro-perfil">
+            <option value="Todos">Todos</option>
+            <option value="Geral">Geral</option>
+            <option value="Jovem">Jovem</option>
+            <option value="Idoso">Idoso</option>
+            <option value="PCD">PCD</option>
+            <option value="Baixa Renda">Baixa Renda</option>
+          </select>
+        </div>
+
+        <div class="acoes-filtro">
+          <button type="submit" class="btn">Pesquisar</button>
+          <button type="button" id="btn-limpar" class="btn btn-secundario">Limpar</button>
+        </div>
+      </form>
     </section>
 
     <p id="contador-resultados" aria-live="polite"></p>
