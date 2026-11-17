@@ -35,7 +35,7 @@ mente-aberta-citec/
     └── img/                # Fotos dos integrantes e capturas de tela do projeto
 
 
-    ## Declaração de Uso de IA
+## Declaração de Uso de IA
 
 Em conformidade com as diretrizes da Global Solution 2026, declaramos que ferramentas de Inteligência Artificial generativa foram utilizadas exclusivamente como apoio durante o desenvolvimento deste projeto:
 
