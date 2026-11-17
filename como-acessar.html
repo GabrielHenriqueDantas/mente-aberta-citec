@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Como Acessar e Checklist | Mente Aberta & C.I-TEC</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+
+  <header class="cabecalho">
+    <div class="container cabecalho-conteudo">
+      <a href="index.html" class="logo">Mente Aberta | C.I-TEC</a>
+      <button type="button" id="btn-menu" class="btn-menu" aria-expanded="false" aria-controls="menu-principal">
+        Menu
+      </button>
+      <nav id="menu-principal" class="menu-principal" aria-label="Navegação principal">
+        <ul class="menu-lista">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="oportunidades.html">Oportunidades</a></li>
+          <li><a href="como-acessar.html" aria-current="page">Como Acessar</a></li>
+          <li><a href="modo-offline.html">Modo Offline</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="integrantes.html">Integrantes</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo-principal" class="container">
+    <h1>Como Acessar e Checklist de Documentos</h1>
+    <p>Escolha um serviço ou benefício abaixo para ver o passo a passo e marcar os documentos que você já separou.</p>
+
+    <section class="card">
+      <div class="campo-form">
+        <label for="select-oportunidade">Selecione a oportunidade</label>
+        <select id="select-oportunidade"></select>
+      </div>
+    </section>
+
+    <section id="detalhes-acesso" class="card">
+      <h2 id="titulo-selecionado"></h2>
+      <p><small id="info-fonte"></small></p>
+
+      <h3>Passo a passo</h3>
+      <ol id="lista-passos" class="lista-passos"></ol>
+
+      <h3>Checklist de documentos</h3>
+      <ul id="lista-documentos" class="lista-checklist"></ul>
+      <p id="progresso-checklist" class="progresso-texto" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <p>Mente Aberta & C.I-TEC — Global Solution 2026 | Acesso anônimo e gratuito ao cidadão.</p>
+    </div>
+  </footer>
+
+  <script src="js/dados.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/checklist.js"></script>
+</body>
+</html>
