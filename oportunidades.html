@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oportunidades | Mente Aberta & C.I-TEC</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+
+  <header class="cabecalho">
+    <div class="container cabecalho-conteudo">
+      <a href="index.html" class="logo">Mente Aberta | C.I-TEC</a>
+      <button type="button" id="btn-menu" class="btn-menu" aria-expanded="false" aria-controls="menu-principal">
+        Menu
+      </button>
+      <nav id="menu-principal" class="menu-principal" aria-label="Navegação principal">
+        <ul class="menu-lista">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="oportunidades.html" aria-current="page">Oportunidades</a></li>
+          <li><a href="como-acessar.html">Como Acessar</a></li>
+          <li><a href="modo-offline.html">Modo Offline</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="integrantes.html">Integrantes</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo-principal" class="container">
+    <h1>Oportunidades Disponíveis</h1>
+    <p>Filtre por tipo de atendimento, perfil ou digite o que você procura.</p>
+
+    <section class="card grupo-filtros" aria-label="Filtros de busca">
+      <div class="campo-form">
+        <label for="campo-busca">Buscar por palavra-chave</label>
+        <input type="search" id="campo-busca" placeholder="Ex: elétrica, SUS, Bolsa, jovem...">
+      </div>
+
+      <div class="campo-form">
+        <label for="filtro-categoria">Categoria</label>
+        <select id="filtro-categoria">
+          <option value="Todos">Todas</option>
+          <option value="Curso">Curso</option>
+          <option value="Serviço">Serviço</option>
+          <option value="Vaga">Vaga</option>
+          <option value="Benefício">Benefício</option>
+        </select>
+      </div>
+
+      <div class="campo-form">
+        <label for="filtro-perfil">Perfil</label>
+        <select id="filtro-perfil">
+          <option value="Todos">Todos</option>
+          <option value="Geral">Geral</option>
+          <option value="Jovem">Jovem</option>
+          <option value="Idoso">Idoso</option>
+          <option value="PCD">PCD</option>
+          <option value="Baixa Renda">Baixa Renda</option>
+        </select>
+      </div>
+    </section>
+
+    <p id="contador-resultados" aria-live="polite"></p>
+    <section id="lista-oportunidades" class="grade-cards"></section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <p>Mente Aberta & C.I-TEC — Global Solution 2026 | Acesso anônimo e gratuito ao cidadão.</p>
+    </div>
+  </footer>
+
+  <script src="js/dados.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/oportunidades.js"></script>
+</body>
+</html>
