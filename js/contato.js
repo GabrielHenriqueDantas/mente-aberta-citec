@@ -2,9 +2,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("form-contato");
   const campoNome = document.getElementById("nome");
   const campoEmail = document.getElementById("email");
+  const campoAssunto = document.getElementById("assunto");
   const campoMensagem = document.getElementById("mensagem");
   const erroNome = document.getElementById("erro-nome");
   const erroEmail = document.getElementById("erro-email");
+  const erroAssunto = document.getElementById("erro-assunto");
   const erroMensagem = document.getElementById("erro-mensagem");
   const feedback = document.getElementById("feedback-contato");
 
@@ -16,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let valido = true;
     erroNome.textContent = "";
     erroEmail.textContent = "";
+    erroAssunto.textContent = "";
     erroMensagem.textContent = "";
     feedback.classList.add("oculto");
 
@@ -27,6 +30,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const emailValor = campoEmail.value.trim();
     if (!emailValor.includes("@") || !emailValor.includes(".")) {
       erroEmail.textContent = "Informe um e-mail válido para retorno.";
+      valido = false;
+    }
+
+    if (campoAssunto.value.trim().length < 3) {
+      erroAssunto.textContent = "Informe o assunto da mensagem.";
       valido = false;
     }
 
