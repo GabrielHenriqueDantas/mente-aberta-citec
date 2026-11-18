@@ -77,7 +77,7 @@ Clone este repositório ou extraia o arquivo .ZIP do projeto:
 
 Bash
 
-git clone [INSERIR_URL_DO_REPOSITORIO_GITHUB]
+git clone [https://github.com/GabrielHenriqueDantas/mente-aberta-citec]
 
 Acesse a pasta do projeto e abra o arquivo index.html diretamente no navegador (ou utilize a extensão Live Server no Visual Studio Code).
 
@@ -91,6 +91,6 @@ Kaio César — RM575944 | Turma: [INSERIR_TURMA] | [LINK_GITHUB_OU_LINKEDIN]
 
 ## Repositório e Declaração de Uso de Inteligência Artificial
 
-Repositório Público: [INSERIR_URL_DO_REPOSITORIO_GITHUB]
+Repositório Público: [https://github.com/GabrielHenriqueDantas/mente-aberta-citec]
 
 Uso de IA Generativa: Ferramentas de Inteligência Artificial foram utilizadas como apoio para revisão de acessibilidade (WCAG), refinamento da folha de estilos CSS3, estruturação de textos em linguagem simples e organização da documentação técnica. Todo o código foi revisado, integrado e validado pelos integrantes da equipe.
