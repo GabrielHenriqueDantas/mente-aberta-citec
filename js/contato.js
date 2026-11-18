@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if (valido) {
-      feedback.textContent = "Mensagem registrada com sucesso. Obrigado por contribuir com o Mente Aberta & C.I-TEC.";
+      feedback.textContent = "Mensagem registrada com sucesso. Obrigado por contribuir com o Mente Aberta.";
       feedback.classList.remove("oculto");
       form.reset();
     }
