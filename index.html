@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mente Aberta & C.I-TEC | Cidadania Acessível</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Mente Aberta | Guia de Serviços Públicos e Oportunidades</title>
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo.svg">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
 
   <header class="cabecalho">
     <div class="container cabecalho-conteudo">
-      <a href="index.html" class="logo">Mente Aberta | C.I-TEC</a>
+      <a href="index.html" class="logo"><img src="assets/img/logo.svg" alt="" class="logo-icone"><span>Mente Aberta</span></a>
       <button type="button" id="btn-menu" class="btn-menu" aria-expanded="false" aria-controls="menu-principal">
         Menu
       </button>
@@ -31,22 +32,82 @@
   </header>
 
   <main id="conteudo-principal" class="container">
-    <section class="card">
-      <h1>Serviços públicos, cursos e benefícios sem complicação</h1>
-      <p>Encontre oportunidades na sua região, veja o passo a passo e monte sua lista de documentos sem precisar fazer cadastro ou informar CPF.</p>
-      <p>
-        <a href="oportunidades.html" class="btn">Buscar Oportunidades</a>
-        <a href="como-acessar.html" class="btn btn-secundario">Montar Checklist</a>
-      </p>
+    <section class="hero">
+      <div class="hero-texto">
+        <span class="hero-selo">Portal Cidadão • Gratuito e Anônimo</span>
+        <h1>Serviços públicos, cursos e benefícios sem complicação</h1>
+        <p>Encontre oportunidades na sua região, veja o passo a passo oficial e monte sua lista de documentos sem precisar fazer cadastro ou informar CPF.</p>
+        <div class="hero-acoes">
+          <a href="oportunidades.html" class="btn btn-claro">Buscar Oportunidades</a>
+          <a href="como-acessar.html" class="btn btn-contorno">Montar Checklist</a>
+        </div>
+        <div class="hero-destaques">
+          <span>✓ Sem login ou CPF</span>
+          <span>✓ Linguagem simples</span>
+          <span>✓ Acesso offline comunitário</span>
+        </div>
+      </div>
+
+      <div class="hero-ilustracao" aria-hidden="true">
+        <svg viewBox="0 0 320 260" width="320" height="260" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="16" y="16" width="288" height="228" rx="20" fill="rgba(255,255,255,0.10)" stroke="rgba(255,255,255,0.28)" stroke-width="2"/>
+          <path d="M84 156L160 92L236 156" stroke="#a7f3d0" stroke-width="3" stroke-dasharray="6 6"/>
+          <path d="M84 156H236" stroke="#a7f3d0" stroke-width="3"/>
+          <circle cx="160" cy="92" r="34" fill="#ffffff"/>
+          <circle cx="160" cy="83" r="10" fill="#047857"/>
+          <path d="M142 108C142 99 150 95 160 95C170 95 178 99 178 108" stroke="#047857" stroke-width="4" stroke-linecap="round"/>
+          <rect x="44" y="140" width="80" height="56" rx="12" fill="#064e3b" stroke="#6ee7b7" stroke-width="2"/>
+          <circle cx="84" cy="160" r="7" fill="#fde68a"/>
+          <rect x="60" y="174" width="48" height="6" rx="3" fill="#d1fae5"/>
+          <rect x="196" y="140" width="80" height="56" rx="12" fill="#064e3b" stroke="#6ee7b7" stroke-width="2"/>
+          <circle cx="236" cy="160" r="7" fill="#fde68a"/>
+          <rect x="212" y="174" width="48" height="6" rx="3" fill="#d1fae5"/>
+          <rect x="104" y="210" width="112" height="18" rx="9" fill="rgba(255,255,255,0.2)"/>
+          <circle cx="122" cy="219" r="4" fill="#fde68a"/>
+          <rect x="134" y="216" width="66" height="6" rx="3" fill="#ffffff"/>
+        </svg>
+      </div>
+    </section>
+
+    <section class="secao-home">
+      <h2>O que você procura hoje?</h2>
+      <div class="grade-categorias">
+        <a href="oportunidades.html?categoria=cursos" class="card-categoria">
+          <div class="icone-box" aria-hidden="true">🎓</div>
+          <h3>Cursos Gratuitos</h3>
+          <p>Qualificação profissional, oficinas e ensino técnico aberto à comunidade.</p>
+        </a>
+
+        <a href="oportunidades.html?categoria=servicos" class="card-categoria">
+          <div class="icone-box" aria-hidden="true">🏥</div>
+          <h3>Saúde e CRAS</h3>
+          <p>Atendimento social, CadÚnico, postos de saúde e apoio familiar.</p>
+        </a>
+
+        <a href="oportunidades.html?categoria=vagas" class="card-categoria">
+          <div class="icone-box" aria-hidden="true">💼</div>
+          <h3>Vagas e Renda</h3>
+          <p>Postos de trabalho (PAT), primeiro emprego e programas de geração de renda.</p>
+        </a>
+
+        <a href="como-acessar.html" class="card-categoria">
+          <div class="icone-box" aria-hidden="true">📋</div>
+          <h3>Documentos e Direitos</h3>
+          <p>Checklists prontos para tirar RG, Carteira Digital e solicitar benefícios.</p>
+        </a>
+      </div>
     </section>
 
     <section class="grade-cards">
       <article class="card">
-        <h2>Acesso Anônimo (Mente Aberta)</h2>
+        <span class="tag">Privacidade Total</span>
+        <h2>Acesso Anônimo e Direto</h2>
         <p>Consulte cursos gratuitos, vagas, serviços do CRAS/UBS e benefícios sociais sem login e sem exposição de dados pessoais.</p>
       </article>
+
       <article class="card">
-        <h2>Funciona Sem Internet (C.I-TEC)</h2>
+        <span class="tag">Inclusão Digital</span>
+        <h2>Funciona Mesmo Sem Internet</h2>
         <p>Escolas, bibliotecas e associações comunitárias sincronizam pacotes leves para acesso local pelo celular sem gastar dados móveis.</p>
       </article>
     </section>
@@ -54,7 +115,7 @@
 
   <footer class="rodape">
     <div class="container">
-      <p>Mente Aberta & C.I-TEC — Global Solution 2026 | Acesso anônimo e gratuito ao cidadão.</p>
+      <p>Mente Aberta — Global Solution 2026 | Acesso anônimo e gratuito ao cidadão.</p>
     </div>
   </footer>
 

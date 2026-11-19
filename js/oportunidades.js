@@ -49,6 +49,28 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+const paramsUrl = new URLSearchParams(window.location.search);
+  const categoriaUrl = paramsUrl.get("categoria");
+
+  if (categoriaUrl && selectCategoria) {
+    const limparTexto = (texto) =>
+      texto.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+
+    const alvo = limparTexto(categoriaUrl);
+
+    for (const opcao of selectCategoria.options) {
+      if (
+        limparTexto(opcao.value).includes(alvo) ||
+        limparTexto(opcao.textContent).includes(alvo)
+      ) {
+        selectCategoria.value = opcao.value;
+        break;
+      }
+    }
+  }
+
+
+
   function filtrarOportunidades() {
     const termo = normalizarTexto(campoBusca.value.trim());
     const categoria = filtroCategoria.value;
