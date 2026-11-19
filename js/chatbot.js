@@ -1,14 +1,12 @@
-const TELEGRAM_BOT = "citecfiap_bot";
-
 document.addEventListener("DOMContentLoaded", () => {
+  if (window.location.pathname.endsWith("chat.html")) return;
+
   const link = document.createElement("a");
-  link.href = `https://t.me/${TELEGRAM_BOT}`;
+  link.href = "chat.html";
   link.className = "botao-chatbot";
-  link.target = "_blank";
-  link.rel = "noopener";
   link.setAttribute(
     "aria-label",
-    "Falar com o assistente do Mente Aberta no Telegram, por texto ou áudio (abre em nova aba)"
+    "Falar com o assistente virtual do Mente Aberta, pelo site ou pelo Telegram"
   );
 
   const icone = document.createElement("span");
