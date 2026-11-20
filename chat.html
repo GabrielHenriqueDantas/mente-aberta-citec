@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assistente Virtual | Mente Aberta</title>
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+
+  <header class="cabecalho">
+    <div class="container cabecalho-conteudo">
+      <a href="index.html" class="logo"><img src="assets/img/logo.svg" alt="" class="logo-icone"><span>Mente Aberta</span></a>
+      <button type="button" id="btn-menu" class="btn-menu" aria-expanded="false" aria-controls="menu-principal">
+        Menu
+      </button>
+      <nav id="menu-principal" class="menu-principal" aria-label="Navegação principal">
+        <ul class="menu-lista">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="oportunidades.html">Oportunidades</a></li>
+          <li><a href="como-acessar.html">Como Acessar</a></li>
+          <li><a href="modo-offline.html">Modo Offline</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="integrantes.html">Integrantes</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo-principal" class="container">
+    <h1>Assistente Virtual</h1>
+    <p>Pergunte sobre cursos gratuitos, serviços públicos, vagas, benefícios ou pontos de acesso offline. Não precisa de cadastro e você não informa nenhum dado pessoal.</p>
+
+    <section class="card chat" aria-labelledby="chat-titulo">
+      <h2 id="chat-titulo" class="chat-titulo">Converse com o Mente Aberta</h2>
+
+      <ol id="chat-mensagens" class="chat-mensagens" role="log" aria-live="polite" aria-label="Conversa com o assistente">
+        <li class="chat-msg chat-msg-bot"><span class="chat-autor">Assistente:</span><span class="chat-texto">Olá! 👋 Sou o assistente do Mente Aberta. Posso te ajudar a achar cursos gratuitos, serviços públicos, vagas, benefícios e o passo a passo para acessar. O que você procura?</span></li>
+      </ol>
+
+      <p id="chat-digitando" class="chat-digitando" hidden>O assistente está escrevendo...</p>
+
+      <div class="chat-sugestoes" aria-label="Sugestões de perguntas">
+        <button type="button" class="chat-sugestao" data-texto="Quero fazer um curso gratuito">Cursos gratuitos</button>
+        <button type="button" class="chat-sugestao" data-texto="Onde fica o posto de saúde?">Serviços públicos</button>
+        <button type="button" class="chat-sugestao" data-texto="Quais benefícios eu posso receber?">Benefícios</button>
+        <button type="button" class="chat-sugestao" data-texto="Estou procurando emprego">Vagas</button>
+        <button type="button" class="chat-sugestao" data-texto="Onde tem ponto de acesso offline?">Ponto offline</button>
+      </div>
+
+      <form id="chat-form" class="chat-form" novalidate>
+        <label for="chat-campo">Sua mensagem</label>
+        <div class="chat-entrada">
+          <input type="text" id="chat-campo" name="mensagem" maxlength="1000" autocomplete="off" placeholder="Ex.: quero um curso de informática">
+          <button type="submit" id="chat-enviar" class="btn">Enviar</button>
+        </div>
+        <p id="chat-erro" class="chat-erro" role="alert" hidden></p>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Prefere áudio?</h2>
+      <p>No Telegram, o mesmo assistente entende mensagens de voz e também responde em áudio.</p>
+      <p><a href="https://t.me/citecfiap_bot" class="btn" target="_blank" rel="noopener">Abrir no Telegram</a></p>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <p>Mente Aberta — Global Solution 2026 | Acesso anônimo e gratuito ao cidadão.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/webchat.js"></script>
+</body>
+</html>
